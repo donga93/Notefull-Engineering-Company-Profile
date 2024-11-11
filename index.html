@@ -2,16 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="'IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notefull Company Profile</title>
     <style>
+        /* Make the iframe responsive */
         #companyPDF {
-                 width: 85%;
-                 height: 975px;
+            width: 100%;
+            max-width: 100%; /* Ensures it doesn’t exceed container width */
+            height: 80vh;    /* Uses 80% of the viewport height */
+            border: none;
+        }
+
+        /* Ensure the page scales well on mobile devices */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
         }
     </style>
 </head>
+<body>
+    <!-- Embed PDF using Google Docs viewer to add controls -->
+    <iframe id="companyPDF" 
+            src="https://docs.google.com/gview?url=your-file-url-here.pdf&embedded=true" 
+            frameborder="0"></iframe>
 </body>
-     <iframe id="companyPDF" src="Notefull Company Profile.pdf" frameborder="1"></iframe>
 </html>
